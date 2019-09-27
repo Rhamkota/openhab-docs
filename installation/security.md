@@ -200,8 +200,8 @@ Now the configuration file (`/etc/nginx/sites-enabled/openhab`) needs to be edit
 Open the configuration file and **add** the following lines underneath the proxy_* settings:
 
 ```nginx
-        auth_basic                            "Username and Password Required";
-        auth_basic_user_file                  /etc/nginx/.htpasswd;
+        auth_basic "Restricted";
+        auth_basic_user_file /etc/nginx/.htpasswd;
 ```
 
 Once done, **test and restart your NGINX service** and authentication should now be enabled on your server!
